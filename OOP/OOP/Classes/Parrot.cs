@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,6 @@ namespace OOP.Classes
         {
             set;get;
         }
-
         // Abstract property overrive.
         public override bool nightVision
         {
@@ -27,7 +27,6 @@ namespace OOP.Classes
                 return false;
             }
         }
-
         public Parrot(string animalName, int age, string sex) : base(animalName, age, sex)
         { }
         // Abstract method overrive.
