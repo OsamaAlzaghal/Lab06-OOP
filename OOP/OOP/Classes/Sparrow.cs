@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace OOP.Classes
 {
     // Derived class.
     // Concrete class, public access modifier.
-    public class Sparrow :Bird
+    // Interfaces IColor and ISing.
+    public class Sparrow :Bird, IColor, ISing
     {
         public string size
         {
@@ -16,6 +18,23 @@ namespace OOP.Classes
         }
         public Sparrow(string animalName, int age, string sex) : base(animalName, age, sex)
         { }
+        // Interface methods implementation.
+        string IColor.Color()
+        {
+            return "A unique dark gray with earthy brown undertones.";
+        }
+        bool ISing.Sing()
+        {
+            return true;
+        }
+        int ISing.numberOfSongs
+        {
+            set; get;
+        }
+        int IColor.numberOfColors
+        {
+            set; get;
+        }
         // Override abstract property.
         public override bool nightVision
         {

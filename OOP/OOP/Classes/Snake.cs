@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,24 @@ namespace OOP.Classes
 {
     // Derived class.
     // Concrete class, public access modifier.
-    public class Snake :Reptile
+    // IColor interface.
+    // Interface IColor.
+    public class Snake :Reptile, IColor
     {
         public Snake(string animalName, int age, string sex) : base(animalName, age, sex)
         { }
         public void Hiss()
         {
             Console.WriteLine("Hisssssss is the sound of a snake.");
+        }
+        // Interface method implementation.
+        public string Color()
+        {
+            return "Some are green with dark patterns on their scales, while others can be bright yellow with traces of white.";
+        }
+        int IColor.numberOfColors
+        {
+            set; get;
         }
         // Abstract method overrive.
         public override void Shape()

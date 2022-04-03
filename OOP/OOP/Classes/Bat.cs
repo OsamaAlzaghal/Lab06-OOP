@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOP.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace OOP.Classes
 {
     // Derived class.
     // Concrete class, public access modifier.
-    public class Bat : Mammal
+    // Interfaces IColor and ISing.
+    public class Bat : Mammal, IColor,ISing
     {
         public int flightHeight
         {
@@ -16,12 +18,36 @@ namespace OOP.Classes
         }
         public Bat(string animalName, int age, string sex, bool specializedTeeth) : base(animalName, age, sex, specializedTeeth)
         { }
+        // Interface method implementaion.
+        string IColor.Color()
+        {
+            return "Bats are typically brown or black in color, but may have grey, red, white or orange fur.";
+        }
+        bool ISing.Sing()
+        {
+            return false;
+        }
+        int ISing.numberOfSongs
+        {
+            set; get;
+        }
         // Abstract property overrive.
         public override bool hasHair
         {
             get
             {
                 return false;
+            }
+        }
+        public int numberOfColors
+        {
+            set
+            {
+                numberOfColors =10;
+            }
+            get
+            {
+                return numberOfColors;
             }
         }
         // Abstract method overrive.
