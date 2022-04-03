@@ -41,7 +41,7 @@ Interface is an abstract base class with only abstract members. Interface in C# 
 ## My interfaces are:
 1. ISing: it has one method which is Sing() and one property which is numberOfSongs, they are implemented in Sparrow and Bat classes, to show the difference between them so each class has it's own version of method and property.
 2. IColor: it also has one method which is Color() and one property which is numberOfColors, they are implemented in Sparrow, Snake and Bat classes, so each animal has it's own color description and property.
-3. 
+
 **Note:** please check the project to view the examples, I also wrote comments to make it easier to understand.
 
 ---
