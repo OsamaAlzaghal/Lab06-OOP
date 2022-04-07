@@ -83,5 +83,12 @@ namespace TestAnimals
             Animal lion = new Lion("Leo", 7, "Male", true);
             Assert.Equal("Called virtual sleep Lion method!", lion.Sleep());
         }
+
+        [Fact]
+        public void IsAnimalTest()
+        {
+            Animal lion = new Lion("Leo", 7, "Male", true);
+            Assert.True(typeof(Lion).IsSubclassOf(typeof(Animal)));
+        }
     }
 }

@@ -31,7 +31,10 @@ namespace OOP.Classes
         // Abstract method.
         public abstract void Sound();
         // Virtual method.
-        public virtual void Eat() { }
+        public virtual void Eat()
+        {
+            Console.WriteLine("Main animal eat method");
+        }
         // Virtual method.
         public virtual string Sleep() { return ""; }
     }
