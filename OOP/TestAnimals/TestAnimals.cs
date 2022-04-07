@@ -87,8 +87,11 @@ namespace TestAnimals
         [Fact]
         public void IsAnimalTest()
         {
-            Animal lion = new Lion("Leo", 7, "Male", true);
             Assert.True(typeof(Lion).IsSubclassOf(typeof(Animal)));
+            Assert.True(typeof(Bat).IsSubclassOf(typeof(Animal)));
+            Assert.True(typeof(Snake).IsSubclassOf(typeof(Animal)));
+            Assert.True(typeof(Sparrow).IsSubclassOf(typeof(Animal)));
+            Assert.True(typeof(Parrot).IsSubclassOf(typeof(Animal)));
         }
     }
 }
